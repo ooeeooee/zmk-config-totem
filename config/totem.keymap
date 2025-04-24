@@ -39,14 +39,24 @@
             bindings = <&kp ESC>;
         };
 
-        combo_enter {
-            bindings = <&kp RETURN>;
-            key-positions = <16 17 18>;
-        };
-
         combo_tab {
             bindings = <&kt TAB>;
             key-positions = <10 11>;
+        };
+
+        combo_tilde {
+            bindings = <&kt TILDE>;
+            key-positions = <20 10>;
+        };
+
+        combo_enter {
+            bindings = <&kt RETURN>;
+            key-positions = <16 17 18>;
+        };
+
+        combo_hyphen {
+            bindings = <&kt MINUS>;
+            key-positions = <19 31>;
         };
     };
 
