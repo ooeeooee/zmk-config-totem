@@ -52,7 +52,7 @@
         };
 
         combo_enter {
-            bindings = <&kt RETURN>;
+            bindings = <&combo_enter_macro>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
         };
