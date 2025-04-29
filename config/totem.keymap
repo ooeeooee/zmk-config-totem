@@ -85,6 +85,13 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
+
+        combo_enter_macro: combo_enter_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>;
+            label = "COMBO_ENTER_MACRO";
+        };
     };
 
     keymap {
