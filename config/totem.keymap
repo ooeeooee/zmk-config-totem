@@ -89,7 +89,7 @@
         combo_enter_macro: combo_enter_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>;
+            bindings = <&macro_tap &kp ENTER>;
             label = "COMBO_ENTER_MACRO";
         };
     };
