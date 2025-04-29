@@ -67,6 +67,13 @@
             timeout-ms = <30>;
             slow-release;
         };
+
+        combo_prtscn {
+            bindings = <&kt PRINTSCREEN>;
+            key-positions = <4 14>;
+            slow-release;
+            timeout-ms = <30>;
+        };
     };
 
     macros {
