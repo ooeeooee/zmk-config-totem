@@ -36,61 +36,84 @@
         combo_esc {
             timeout-ms = <30>;
             key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            bindings = <&macro_esc>;
         };
 
         combo_tab {
-            bindings = <&kt TAB>;
+            bindings = <&macro_tab>;
             key-positions = <10 11>;
             timeout-ms = <30>;
         };
 
         combo_tilde {
-            bindings = <&kt TILDE>;
+            bindings = <&macro_tilde>;
             key-positions = <20 10>;
             timeout-ms = <30>;
         };
 
         combo_enter {
-            bindings = <&combo_enter_macro>;
+            bindings = <&macro_enter>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
         };
 
         combo_hyphen {
-            bindings = <&kt MINUS>;
+            bindings = <&macro_hyphen>;
             key-positions = <19 31>;
             timeout-ms = <30>;
         };
 
         combo_prtscn {
-            bindings = <&kt PRINTSCREEN>;
+            bindings = <&macro_prtscn>;
             key-positions = <4 14>;
             timeout-ms = <30>;
         };
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
+        macro_enter: combo_enter_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
+            bindings = <&macro_tab &kp ENTER>;
+            label = "COMBO_ENTER_MACRO";
         };
 
-        combo_enter_macro: combo_enter_macro {
+        macro_esc: macro_esc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp ENTER>;
-            label = "COMBO_ENTER_MACRO";
+            bindings = <&macro_tab &kp ESC>;
+            label = "MACRO_ESC";
+        };
+
+        macro_tab: macro_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tab &kp TAB>;
+            label = "MACRO_TAP";
+        };
+
+        macro_tilde: macro_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp TILDE>;
+
+            label = "MACRO_TILDE";
+        };
+
+        macro_hyphen: macro_hyphen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp MINUS>;
+
+            label = "MACRO_HYPHEN";
+        };
+
+        macro_prtscn: macro_prtscn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp PRINTSCREEN>;
+
+            label = "MACRO_PRTSCN";
         };
     };
 
