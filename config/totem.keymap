@@ -34,7 +34,7 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <10>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
@@ -42,21 +42,25 @@
         combo_tab {
             bindings = <&kt TAB>;
             key-positions = <10 11>;
+            timeout-ms = <10>;
         };
 
         combo_tilde {
             bindings = <&kt TILDE>;
             key-positions = <20 10>;
+            timeout-ms = <10>;
         };
 
         combo_enter {
             bindings = <&kt RETURN>;
             key-positions = <16 17 18>;
+            timeout-ms = <10>;
         };
 
         combo_hyphen {
             bindings = <&kt MINUS>;
             key-positions = <19 31>;
+            timeout-ms = <10>;
         };
     };
 
