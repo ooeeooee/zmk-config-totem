@@ -74,21 +74,24 @@
         macro_enter: combo_enter_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tab &kp ENTER>;
+            bindings = <&macro_tap>, <&kp ENTER>;
+
             label = "COMBO_ENTER_MACRO";
         };
 
         macro_esc: macro_esc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tab &kp ESC>;
+            bindings = <&macro_tap>, <&kp ESC>;
+
             label = "MACRO_ESC";
         };
 
         macro_tab: macro_tap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tab &kp TAB>;
+            bindings = <&macro_tap>, <&kp TAB>;
+
             label = "MACRO_TAP";
         };
 
